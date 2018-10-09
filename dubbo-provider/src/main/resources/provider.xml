@@ -14,6 +14,8 @@
     <bean id="provideServiceImp" class="com.example.dubbo_provider.ProvideServiceImp"/>
     <!-- declare the service interface to be exported -->
     <dubbo:service interface="com.example.dubbo_interface.ProvideService" ref="provideServiceImp"/>
-    <!-- link monitor center -->
-    <dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor>
+    <!-- auto search monitor center -->
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
+    <!-- communicate directly monitor center -->
+    <!-- <dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor> -->
 </beans>
