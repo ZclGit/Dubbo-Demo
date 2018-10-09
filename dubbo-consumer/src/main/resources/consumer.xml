@@ -16,4 +16,8 @@
     <!-- generate proxy for the remote service, then demoService can be used in the same way as the
     local regular interface -->
     <dubbo:reference id="provideService" check="false" interface="com.example.dubbo_interface.ProvideService"/>
+    <!-- auto discover monitor center -->
+    <!-- <dubbo:monitor protocol="registry"></dubbo:monitor> -->
+    <!-- communicate directly monitor center-->
+    <dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor>
 </beans>
